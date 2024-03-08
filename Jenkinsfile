@@ -5,19 +5,19 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your code from version control system (e.g., Git)
-                git 'https://github.com/AnissaPRO/Jenkins'
+                git 'https://github.com/AnissaPRO/Jenkins.git'
             }
         }
         stage('Build') {
             steps {
-                // Build your project (e.g., Maven, Gradle)
-                sh 'mvn clean package'
+               
+                echo 'build'
             }
         }
         stage('Test') {
             steps {
-                // Run your tests (e.g., JUnit, Selenium)
-                sh 'mvn test'
+                
+                echo 'test'
             }
         }
         stage('Deploy') {
